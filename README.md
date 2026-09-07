@@ -10,4 +10,4 @@ Organization site for [AgentHangar](https://github.com/agenthangar). Plain stati
 
 ## Publishing
 
-Push this repository to `agenthangar/agenthangar.github.io` and enable GitHub Pages (Settings → Pages → Deploy from branch `main`, root). The site will be served at https://agenthangar.github.io/.
+Push this repository to `agenthangar/agenthangar.github.io` and enable GitHub Pages (Settings → Pages → Deploy from branch `main`, root). The `CNAME` file points GitHub Pages at https://agenthangar.ai/; DNS for that domain lives in Cloudflare.

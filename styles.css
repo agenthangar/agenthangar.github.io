@@ -83,7 +83,7 @@ a:focus-visible { outline: 2px solid var(--beacon); outline-offset: 3px; border-
 .section-head .meta { font-family: var(--mono); font-size: 13px; color: var(--ink-faint); }
 
 /* Bays */
-.bays { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; list-style: none; margin: 0; padding: 0; }
+.bays { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; list-style: none; margin: 0; padding: 0; }
 .bay {
   display: flex; flex-direction: column; gap: 18px; padding: 28px;
   background: var(--bg-raised); border: 1px solid var(--line); border-radius: 10px; min-height: 260px;
@@ -96,6 +96,19 @@ a:focus-visible { outline: 2px solid var(--beacon); outline-offset: 3px; border-
 .bay h3 { margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink-bright); }
 .bay p { margin: 0; font-size: 15px; color: var(--ink-muted); flex-grow: 1; text-wrap: pretty; }
 .bay .more { font-size: 14px; font-weight: 500; }
+.bay-preview { display: block; overflow: hidden; border: 1px solid var(--line-strong); border-radius: 6px; max-width: 340px; }
+.bay-preview img { display: block; width: 100%; height: auto; }
+.bay-preview:hover { border-color: var(--beacon); }
+
+/* t demo */
+.demo-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: clamp(24px, 5vw, 64px); }
+.demo-copy .eyebrow { margin: 0 0 12px; }
+.demo-copy h3 { margin: 0 0 18px; font-size: clamp(30px, 4vw, 52px); line-height: 1.03; letter-spacing: -0.03em; color: var(--ink-bright); }
+.demo-copy p:not(.eyebrow) { margin: 0; max-width: 490px; font-size: 17px; color: var(--ink-muted); }
+.demo-copy code { color: var(--ink-bright); font-family: var(--mono); font-size: .86em; }
+.demo-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 28px; }
+.demo-actions .text-link { font-weight: 500; }
+.demo-layout video { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 676; background: var(--bg-raised); border: 1px solid var(--line-strong); border-radius: 10px; }
 
 /* Principles */
 .principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; border-top: 1px solid var(--line); padding-top: 64px; margin: 0; }
@@ -115,6 +128,7 @@ a:focus-visible { outline: 2px solid var(--beacon); outline-offset: 3px; border-
 
 @media (max-width: 900px) {
   .bays { grid-template-columns: 1fr; }
+  .demo-layout { grid-template-columns: 1fr; }
   .principles { grid-template-columns: 1fr; gap: 32px; padding-top: 48px; }
 }
 

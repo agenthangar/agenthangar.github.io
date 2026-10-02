@@ -92,7 +92,7 @@
           <div class="bay-meta"><span class="num">BAY 04</span><span class="stack">Python &middot; zsh</span></div>
           <h3>t</h3>
           <p>A 24/7 coding utility for work that follows you: give a task to Claude Code or Codex, check in on the go, and move its session between your local machine and a remote host.</p>
-          <a class="bay-preview" href="#t-demo" aria-label="Watch the t local workflow demo"><img src="assets/t-demo-poster.png" width="1200" height="676" alt="Terminal view of t listing a demo worktree and tmux session" loading="lazy"></a>
+          <a class="bay-preview" href="#t-demo" aria-label="Watch the t host handoff demo"><img src="assets/t-demo-poster.png" width="1200" height="676" alt="A Codex thread moving from Mac to mini and back, with the remote turn retained" loading="lazy"></a>
           <a class="more" href="https://github.com/agenthangar/t">View on GitHub &rarr;</a>
         </li>
       </ul>
@@ -103,7 +103,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2>Flight demo / t</h2>
-        <span class="meta">real Codex session &middot; 18 seconds</span>
+        <span class="meta">verified host handoff &middot; 24 seconds</span>
       </div>
       <div class="agent-support" aria-label="Supported coding agents">
         <p class="agent-support-label">Your agents. One place to manage the work.</p>
@@ -118,13 +118,18 @@
         <div class="demo-copy">
           <p class="eyebrow">One task. One worktree. One slot.</p>
           <h3>Start here. Keep going anywhere.</h3>
-          <p>Hand a task to your coding agent with <code>t open</code>. It gets its own worktree and tmux slot, so you can check its progress and return to the same work later. This short recording shows that local flow with a real Codex session.</p>
+          <p>Start a Codex task on your Mac, move it to another host, then bring it home with the conversation intact. This walkthrough uses verified CLI output from a real Mac &rarr; mini &rarr; Mac session. The final beat sends a desktop open request; app delivery is unconfirmed.</p>
           <div class="demo-actions">
             <a class="button" href="https://github.com/agenthangar/t#install">Get started</a>
             <a class="text-link" href="https://github.com/agenthangar/t">GitHub &rarr;</a>
           </div>
+          <div class="demo-install" aria-label="Install t with Homebrew">
+            <span>Install with Homebrew</span>
+            <code>brew install agenthangar/tap/t</code>
+            <a href="https://github.com/agenthangar/t#install">Connect your shell &amp; choose your agent &rarr;</a>
+          </div>
         </div>
-        <video controls playsinline muted loop preload="none" poster="assets/t-demo-poster.png" aria-label="Local t command demo showing open, list, and worktree navigation">
+        <video controls playsinline muted loop preload="none" poster="assets/t-demo-poster.png" aria-label="Verified Codex host handoff from Mac to mini and back, followed by a desktop open request">
           <source src="assets/t-demo.mp4" type="video/mp4">
           <a href="assets/t-demo.mp4">Download the t demo video</a>
         </video>
@@ -152,7 +157,7 @@
         <div class="workflow-step">
           <span class="workflow-number">03 / Desktop</span>
           <h3>Switch how you work.</h3>
-          <p>On a Mac, <code>t app</code> opens a local Codex conversation in the desktop app with its running web preview. Continue the same thread in the terminal when you are ready.</p>
+          <p>On a Mac, <code>t open my-project --app</code> opens an isolated worktree in the Codex desktop app. Use <code>t app</code> to hand over an existing local Codex conversation with its running web preview.</p>
         </div>
       </div>
       <div class="workflow-config">
@@ -160,7 +165,7 @@
           <span class="workflow-number">Make it yours / make it repeatable</span>
           <h3>Choose your defaults. Share your playbook.</h3>
         </div>
-        <p>Choose what works for you, and share the defaults your team or enterprise wants to standardize across vendors: models, MCP tools, and preferred workflows. <code>t config</code> sets agent, model, and effort defaults for new sessions, including agent choices per project. Each agent's own configuration controls which MCP tools load; t gives supported agents a common session workflow.</p>
+        <p>Clone and register a GitHub project with <code>t checkout</code>. Choose agent, model, and effort defaults with <code>t config</code>, then use <code>t instructions</code> to create your reusable AGENTS.md profile: local previews, pull requests, conflict resolution, and auto-merge. Checkout and setup offer to apply your profile while preserving existing repo guidance. Each agent's own configuration controls its MCP tools.</p>
       </div>
       <p class="workflow-note">Coming soon: submit work to your agent framework, starting with AgentCore.</p>
       <p class="workflow-note">Sessions stay available while their host is powered on and reachable. <a href="https://github.com/agenthangar/t#commands">Explore t commands &rarr;</a></p>

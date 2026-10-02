@@ -101,6 +101,14 @@ a:focus-visible { outline: 2px solid var(--beacon); outline-offset: 3px; border-
 .bay-preview:hover { border-color: var(--beacon); }
 
 /* t demo */
+.agent-support { margin-bottom: 40px; padding: 24px 0 28px; border-bottom: 1px solid var(--line); }
+.agent-support-label { margin: 0 0 28px; color: var(--ink-muted); font-size: 15px; }
+.agent-logos { display: flex; flex-wrap: wrap; gap: 32px clamp(40px, 7vw, 96px); }
+.agent-logos a { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; color: var(--ink-muted); }
+.agent-logos img { display: block; object-fit: contain; object-position: left center; }
+.agent-logos span { font-family: var(--mono); font-size: 12px; }
+.agent-logos a:hover span { color: var(--beacon); }
+.agent-support-note { margin: 24px 0 0; color: var(--ink-faint); font-size: 12px; }
 .demo-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: clamp(24px, 5vw, 64px); }
 .demo-copy .eyebrow { margin: 0 0 12px; }
 .demo-copy h3 { margin: 0 0 18px; font-size: clamp(30px, 4vw, 52px); line-height: 1.03; letter-spacing: -0.03em; color: var(--ink-bright); }

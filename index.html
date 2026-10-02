@@ -91,7 +91,7 @@
         <li class="bay bay-t">
           <div class="bay-meta"><span class="num">BAY 04</span><span class="stack">Python &middot; zsh</span></div>
           <h3>t</h3>
-          <p>Open coding-agent tasks in separate Git worktrees and tmux slots. Find, resume, and move sessions from one command.</p>
+          <p>A 24/7 coding utility for work that follows you: give a task to Claude Code or Codex, check in on the go, and move its session between your local machine and a remote host.</p>
           <a class="bay-preview" href="#t-demo" aria-label="Watch the t local workflow demo"><img src="assets/t-demo-poster.png" width="1200" height="676" alt="Terminal view of t listing a demo worktree and tmux session" loading="lazy"></a>
           <a class="more" href="https://github.com/agenthangar/t">View on GitHub &rarr;</a>
         </li>
@@ -108,8 +108,8 @@
       <div class="demo-layout">
         <div class="demo-copy">
           <p class="eyebrow">One task. One worktree. One slot.</p>
-          <h3>Keep the work in view.</h3>
-          <p><code>t open</code> starts an isolated worktree and tmux session. Codex answers a short prompt, <code>t ls</code> shows the active slot, and <code>t cd</code> takes you to its files. The recording uses a disposable repository and a real Codex session.</p>
+          <h3>Start here. Keep going anywhere.</h3>
+          <p>Hand a task to your coding agent with <code>t open</code>. It gets its own worktree and tmux slot, so you can check its progress and return to the same work later. This short recording shows that local flow with a real Codex session.</p>
           <div class="demo-actions">
             <a class="button" href="https://github.com/agenthangar/t#install">Get started</a>
             <a class="text-link" href="https://github.com/agenthangar/t">GitHub &rarr;</a>
@@ -120,6 +120,41 @@
           <a href="assets/t-demo.mp4">Download the t demo video</a>
         </video>
       </div>
+    </div>
+  </section>
+
+  <section class="section t-workflow" aria-labelledby="t-workflow-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="t-workflow-title">Keep the task moving / t</h2>
+        <span class="meta">terminal &middot; remote host &middot; desktop</span>
+      </div>
+      <div class="workflow-grid">
+        <div class="workflow-step">
+          <span class="workflow-number">01 / On the go</span>
+          <h3>Check in from anywhere.</h3>
+          <p>Connect through a phone terminal or another computer, see your sessions with <code>t ls</code>, and pick up the conversation when you have a moment.</p>
+        </div>
+        <div class="workflow-step">
+          <span class="workflow-number">02 / Local to cloud</span>
+          <h3>Take the work to another host.</h3>
+          <p>Use <code>t beam</code> to move a session over SSH between your machine and a remote Mac or Linux host, including a cloud VM you set up. Bring it back when you return.</p>
+        </div>
+        <div class="workflow-step">
+          <span class="workflow-number">03 / Desktop</span>
+          <h3>Switch how you work.</h3>
+          <p>On a Mac, <code>t app</code> opens a local Codex conversation in the desktop app with its running web preview. Continue the same thread in the terminal when you are ready.</p>
+        </div>
+      </div>
+      <div class="workflow-config">
+        <div>
+          <span class="workflow-number">Make it yours / make it repeatable</span>
+          <h3>Choose your defaults. Share your playbook.</h3>
+        </div>
+        <p>Choose what works for you, and share the defaults your team or enterprise wants to standardize across vendors: models, MCP tools, and preferred workflows. <code>t config</code> sets agent, model, and effort defaults for new sessions, including agent choices per project. Each agent's own configuration controls which MCP tools load; t gives supported agents a common session workflow.</p>
+      </div>
+      <p class="workflow-note">Coming soon: submit work to your agent framework, starting with AgentCore.</p>
+      <p class="workflow-note">Sessions stay available while their host is powered on and reachable. <a href="https://github.com/agenthangar/t#commands">Explore t commands &rarr;</a></p>
     </div>
   </section>
 

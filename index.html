@@ -11,12 +11,12 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AgentHangar — Ground crew for coding agents</title>
-  <meta name="description" content="Open-source tools to run, measure, and report on coding agents from your own machine. Self-hosted, reproducible, with evidence behind every claim.">
+  <title>AgentHangar — Build with agents. On your own hardware.</title>
+  <meta name="description" content="Agentic tooling for software engineers, running on your own hardware. Open-source tools for making AI a natural part of everyday engineering.">
   <meta name="theme-color" content="#141516">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <meta property="og:title" content="AgentHangar">
-  <meta property="og:description" content="Ground crew for coding agents. Open-source tools to run, measure, and report on coding agents from your own machine.">
+  <meta property="og:description" content="Build with agents. On your own hardware. Open-source agentic tooling for software engineers.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://agenthangar.ai/">
   <meta property="og:image" content="https://agenthangar.ai/assets/t-social-card.png">
@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261011-readable66">
 </head>
 <body>
 
@@ -41,8 +41,7 @@
       <span>agenthangar</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a class="text-link" href="#projects">Projects</a>
-      <a class="text-link" href="#principles">Principles</a>
+      <a class="text-link" href="#featured">Tools in action</a>
       <a class="gh" href="https://github.com/agenthangar"><span class="gh-long">github.com/agenthangar</span><span class="gh-short">GitHub</span></a>
     </nav>
   </div>
@@ -51,145 +50,79 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">Hangar 01 &middot; Open source &middot; MIT</p>
-      <h1>Ground crew for coding agents.</h1>
-      <p class="lede">Tools to run, measure, and report on coding agents from your own machine. Self-hosted, reproducible, and with evidence behind every claim.</p>
+      <p class="eyebrow">Our vision</p>
+      <h1>Build with agents.<br>On your own hardware.</h1>
+      <p class="lede">Our vision is to make AI a natural part of software engineering, with agentic tooling that runs on your own hardware. We’re starting with open-source tools you can use, adapt, and build on.</p>
       <div class="hero-actions">
-        <a class="button" href="https://github.com/agenthangar">Browse the repositories
+        <a class="button" href="#featured">Explore the tools
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <span class="meta">4 repositories &middot; TypeScript, Python, zsh</span>
+        <span class="meta">Open source &middot; Built for software engineers</span>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="projects">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>On the flight line</h2>
-        <span class="meta">bay / project / stack</span>
-      </div>
-      <ul class="bays">
-        <li class="bay">
-          <div class="bay-meta"><span class="num">BAY 01</span><span class="stack">TypeScript</span></div>
-          <h3>runtimebrief</h3>
-          <p>Self-hosted project briefs from local repositories and coding-agent activity, with evidence for every claim.</p>
-          <a class="more" href="https://github.com/agenthangar/runtimebrief">View on GitHub &rarr;</a>
-        </li>
-        <li class="bay">
-          <div class="bay-meta"><span class="num">BAY 02</span><span class="stack">Python</span></div>
-          <h3>evals</h3>
-          <p>Reproducible private benchmarks for choosing coding-agent configurations.</p>
-          <a class="more" href="https://github.com/agenthangar/evals">View on GitHub &rarr;</a>
-        </li>
-        <li class="bay">
-          <div class="bay-meta"><span class="num">BAY 03</span><span class="stack">Python &middot; zsh</span></div>
-          <h3>dotfiles</h3>
-          <p>Personal macOS and zsh setup: shell utilities, sync, sleep management, and PII scanning.</p>
-          <a class="more" href="https://github.com/agenthangar/dotfiles">View on GitHub &rarr;</a>
-        </li>
-        <li class="bay bay-t">
-          <div class="bay-meta"><span class="num">BAY 04</span><span class="stack">Python &middot; zsh</span></div>
-          <h3>t</h3>
-          <p>A 24/7 coding utility for work that follows you: give a task to Claude Code or Codex, check in on the go, and move its session between your local machine and a remote host.</p>
-          <a class="bay-preview" href="#t-demo" aria-label="Watch the t host handoff demo"><img src="assets/t-demo-poster.png" width="1200" height="676" alt="A Codex thread moving from Mac to mini and back, with the remote turn retained" loading="lazy"></a>
-          <a class="more" href="https://github.com/agenthangar/t">View on GitHub &rarr;</a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section demo-section" id="t-demo">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Flight demo / t</h2>
-        <span class="meta">verified host handoff &middot; 24 seconds</span>
-      </div>
-      <div class="agent-support" aria-label="Supported coding agents">
-        <p class="agent-support-label">Your agents. One place to manage the work.</p>
+      <div class="agent-support" aria-label="Agent support">
         <div class="agent-logos">
-          <a href="https://github.com/agenthangar/t#agents"><img src="assets/agent-logos/claude-dark.svg" alt="Claude" width="137" height="30"><span>Claude Code sessions</span></a>
-          <a href="https://github.com/agenthangar/t#agents"><img src="assets/agent-logos/openai-dark.svg" alt="OpenAI" width="112" height="30"><span>Codex CLI + desktop</span></a>
-          <a href="https://github.com/agenthangar/t#agents"><img src="assets/agent-logos/cursor-dark.svg" alt="Cursor" width="126" height="30"><span>Cursor transfer tools</span></a>
+          <a href="https://github.com/agenthangar/t#agents"><img src="assets/agent-logos/openai-dark.svg" alt="OpenAI" width="112" height="30"><span>Codex · CLI + macOS desktop</span></a>
+          <a href="https://github.com/agenthangar/t#agents"><img src="assets/agent-logos/claude-dark.svg" alt="Claude" width="137" height="30"><span>Claude Code · terminal sessions</span></a>
+          <a href="https://github.com/agenthangar/t#agents"><img src="assets/agent-logos/cursor-dark.svg" alt="Cursor" width="126" height="30"><span>Cursor · transfer tools</span></a>
         </div>
-        <p class="agent-support-note">Independent tools. Logos belong to their respective owners. <a href="https://github.com/agenthangar/t#agents">Compare agent support &rarr;</a></p>
       </div>
-      <div class="demo-layout">
+    </div>
+  </section>
+
+  <section class="section tool-showcase" id="featured" aria-labelledby="featured-title">
+    <div class="wrap">
+      <div class="section-head"><h2 id="featured-title">Tools in action</h2><span class="meta">Pick your ground crew</span></div>
+      <div class="tool-picker" aria-label="Featured tools">
+        <button type="button" id="pick-t" data-tool="t-demo"><span class="tool-index">01 / Run</span><strong>t</strong><span>One task. Every surface.</span></button>
+        <button type="button" id="pick-runtimebrief" data-tool="runtimebrief-demo"><span class="tool-index">02 / Report</span><strong>runtimebrief</strong><span>Project updates with evidence.</span></button>
+        <button type="button" id="pick-evals" data-tool="evals-demo"><span class="tool-index">03 / Measure</span><strong>evals</strong><span>Choose your agent setup.</span></button>
+        <button type="button" id="pick-dotfiles" data-tool="dotfiles-demo"><span class="tool-index">04 / Equip</span><strong>dotfiles</strong><span>Make your machine your own.</span></button>
+      </div>
+      <article class="tool-panel" id="t-demo" aria-labelledby="pick-t">
+      <div class="t-intro">
+        <div><p class="eyebrow">Your coding agents, at home on your desktop.</p>
+          <h2>Your terminal.<br>Your desktop.<br><span>Same task.</span></h2></div>
+        <div class="t-intro-copy"><p>Open a task in the terminal. Move it to another machine. Bring it into the Codex desktop app, or resume when you’re ready. Keep the conversation with the work.</p>
+          <p class="surface-note">Desktop handoff on macOS · Terminal workflows on macOS &amp; Linux</p>
+          <div class="demo-actions"><a class="button" href="https://github.com/agenthangar/t#install">Get t &rarr;</a><a class="text-link" href="#t-recordings">Watch it in the terminal &darr;</a></div>
+        </div>
+      </div>
+      <div class="desktop-flow" aria-label="Four ways to keep a task moving">
+        <div class="surface-panel"><span class="surface-kicker">01 / Open</span><h3>Start here.</h3><code>t open my-project --codex</code><p>Open your agent in an isolated worktree, with your selected model.</p></div>
+        <div class="surface-panel"><span class="surface-kicker">02 / Another host</span><h3>Move it there.</h3><code>t beam my-project 1 --host mini</code><p>Move the task and its conversation to your other machine. Bring it home with <code>t beam my-project 1 --from mini</code></p></div>
+        <div class="surface-panel desktop-panel"><span class="surface-kicker">03 / Desktop <span class="os-badge">macOS</span></span><h3>Open in the app.</h3><code>t open my-project 1 --app</code><p>Continue the local Codex conversation with your preview and plan alongside it.</p></div>
+        <div class="surface-panel"><span class="surface-kicker">04 / Resume</span><h3>Pick it back up.</h3><code>t resume my-project 1</code><p>Return to a saved conversation after its terminal session ends.</p></div>
+      </div>
+      <div class="demo-layout" id="t-recordings">
         <div class="demo-copy">
-          <p class="eyebrow">One task. One worktree. One slot.</p>
-          <h3>Start here. Keep going anywhere.</h3>
-          <p>Start a Codex task on your Mac, move it to another host, then bring it home with the conversation intact. This walkthrough uses verified CLI output from a real Mac &rarr; mini &rarr; Mac session. The final beat sends a desktop open request; app delivery is unconfirmed.</p>
-          <div class="demo-actions">
-            <a class="button" href="https://github.com/agenthangar/t#install">Get started</a>
-            <a class="text-link" href="https://github.com/agenthangar/t">GitHub &rarr;</a>
-          </div>
-          <div class="demo-install" aria-label="Install t with Homebrew">
-            <span>Install with Homebrew</span>
-            <code>brew install agenthangar/tap/t</code>
-            <a href="https://github.com/agenthangar/t#install">Connect your shell &amp; choose your agent &rarr;</a>
-          </div>
+          <p class="eyebrow">Open · Move · App · Resume</p>
+          <h3>Real work.<br>Same context.</h3>
+          <p>Fix a real CLI bug with GPT-6.1-Sol: reproduce two failing tests, edit the code, and get five tests passing. Move the task to mini, run the fixed CLI there, bring it into Codex desktop, then resume the same conversation in the terminal.</p>
+          <div class="demo-install"><span>Install with Homebrew</span><code>brew install agenthangar/tap/t</code><a href="https://github.com/agenthangar/t#install">Finish shell setup &amp; choose your agent &rarr;</a></div>
         </div>
-        <video controls playsinline muted loop preload="none" poster="assets/t-demo-poster.png" aria-label="Verified Codex host handoff from Mac to mini and back, followed by a desktop open request">
-          <source src="assets/t-demo.mp4" type="video/mp4">
-          <a href="assets/t-demo.mp4">Download the t demo video</a>
-        </video>
+        <figure class="terminal-recording" id="recording-flow">
+          <video width="1424" height="852" controls playsinline muted preload="metadata" poster="assets/recordings/workflow-poster.png?v=20261011-readable66" aria-label="Fix a task CLI: failing tests, code changes, passing tests on Mac and mini, desktop handoff, and terminal resume">
+            <source src="assets/recordings/workflow.mp4?v=20261011-readable66" type="video/mp4">
+            <a href="assets/recordings/workflow.mp4?v=20261011-readable66">Watch the workflow recording</a>
+          </video>
+        </figure>
       </div>
+      </article>
+      <article class="tool-panel" id="runtimebrief-demo" aria-labelledby="pick-runtimebrief">
+        <div class="feature-layout"><div class="feature-copy"><p class="eyebrow">runtimebrief / Project reporting</p><h2>Know what moved.<br><span>See the evidence.</span></h2><p>Turn local repository and coding-agent activity into project briefs with evidence behind every claim.</p><p class="surface-note">Self-hosted · TypeScript</p><a class="button" href="https://github.com/agenthangar/runtimebrief">Explore runtimebrief &rarr;</a></div>
+          <div class="feature-map" aria-label="How runtimebrief works"><span class="map-label">From activity to a useful update</span><div><b>01</b><section><h3>Local repositories</h3><p>The work, where it happens.</p></section></div><div><b>02</b><section><h3>Coding-agent activity</h3><p>The context behind the changes.</p></section></div><div><b>03</b><section><h3>Project briefs</h3><p>Claims connected to their evidence.</p></section></div></div></div>
+      </article>
+      <article class="tool-panel" id="evals-demo" aria-labelledby="pick-evals">
+        <div class="feature-layout"><div class="feature-copy"><p class="eyebrow">evals / Agent benchmarks</p><h2>Compare the setups.<br><span>Keep the evidence.</span></h2><p>Reproducible private benchmarks for choosing coding-agent configurations. Make the comparison part of your own development workflow.</p><p class="surface-note">Private benchmarks · Python</p><a class="button" href="https://github.com/agenthangar/evals">Explore evals &rarr;</a></div>
+          <div class="feature-map" aria-label="What evals is for"><span class="map-label">A repeatable comparison</span><div><b>01</b><section><h3>Your benchmarks</h3><p>Evaluate the work that matters to you.</p></section></div><div><b>02</b><section><h3>Agent configurations</h3><p>Compare the setups you’re considering.</p></section></div><div><b>03</b><section><h3>Reproducible runs</h3><p>Return to the evidence behind the choice.</p></section></div></div></div>
+      </article>
+      <article class="tool-panel" id="dotfiles-demo" aria-labelledby="pick-dotfiles">
+        <div class="feature-layout"><div class="feature-copy"><p class="eyebrow">dotfiles / Local setup</p><h2>A familiar shell.<br><span>A prepared machine.</span></h2><p>A personal macOS and zsh setup with shell utilities, sync, sleep management, and PII scanning.</p><p class="surface-note">macOS · Python + zsh</p><a class="button" href="https://github.com/agenthangar/dotfiles">Explore dotfiles &rarr;</a></div>
+          <div class="feature-map" aria-label="Tools in dotfiles"><span class="map-label">The everyday essentials</span><div><b>01</b><section><h3>Shell utilities</h3><p>Keep routine commands close at hand.</p></section></div><div><b>02</b><section><h3>Sync &amp; sleep management</h3><p>Support the way your machine works.</p></section></div><div><b>03</b><section><h3>PII scanning</h3><p>Check for personal information.</p></section></div></div></div>
+      </article>
     </div>
   </section>
 
-  <section class="section t-workflow" aria-labelledby="t-workflow-title">
-    <div class="wrap">
-      <div class="section-head">
-        <h2 id="t-workflow-title">Keep the task moving / t</h2>
-        <span class="meta">terminal &middot; remote host &middot; desktop</span>
-      </div>
-      <div class="workflow-grid">
-        <div class="workflow-step">
-          <span class="workflow-number">01 / On the go</span>
-          <h3>Check in from anywhere.</h3>
-          <p>Connect through a phone terminal or another computer, see your sessions with <code>t ls</code>, and pick up the conversation when you have a moment.</p>
-        </div>
-        <div class="workflow-step">
-          <span class="workflow-number">02 / Local to cloud</span>
-          <h3>Take the work to another host.</h3>
-          <p>Use <code>t beam</code> to move a session over SSH between your machine and a remote Mac or Linux host, including a cloud VM you set up. Bring it back when you return.</p>
-        </div>
-        <div class="workflow-step">
-          <span class="workflow-number">03 / Desktop</span>
-          <h3>Switch how you work.</h3>
-          <p>On a Mac, <code>t open my-project --app</code> opens an isolated worktree in the Codex desktop app. Use <code>t app</code> to hand over an existing local Codex conversation with its running web preview.</p>
-        </div>
-      </div>
-      <div class="workflow-config">
-        <div>
-          <span class="workflow-number">Make it yours / make it repeatable</span>
-          <h3>Choose your defaults. Share your playbook.</h3>
-        </div>
-        <p>Clone and register a GitHub project with <code>t checkout</code>. Choose agent, model, and effort defaults with <code>t config</code>, then use <code>t instructions</code> to create your reusable AGENTS.md profile: local previews, pull requests, conflict resolution, and auto-merge. Checkout and setup offer to apply your profile while preserving existing repo guidance. Each agent's own configuration controls its MCP tools.</p>
-      </div>
-      <p class="workflow-note">Coming soon: submit work to your agent framework, starting with AgentCore.</p>
-      <p class="workflow-note">Sessions stay available while their host is powered on and reachable. <a href="https://github.com/agenthangar/t#commands">Explore t commands &rarr;</a></p>
-    </div>
-  </section>
-
-  <section class="section" id="principles">
-    <div class="wrap">
-      <dl class="principles">
-        <div>
-          <dt data-num="01">Evidence for every claim</dt>
-          <dd>Briefs and benchmarks link back to the commits, sessions, and runs that produced them.</dd>
-        </div>
-        <div>
-          <dt data-num="02">Runs on your machine</dt>
-          <dd>Self-hosted by default. Your repositories and agent logs never leave the hangar.</dd>
-        </div>
-        <div>
-          <dt data-num="03">MIT, always</dt>
-          <dd>Every project ships under the MIT license. Fork it, wire it into your own setup, keep it.</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -199,5 +132,6 @@
   </div>
 </footer>
 
+<script src="tools.js?v=20261011-readable66"></script>
 </body>
 </html>

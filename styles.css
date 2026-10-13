@@ -260,3 +260,18 @@ a:focus-visible { outline: 2px solid var(--beacon); outline-offset: 3px; border-
 @media (max-width: 900px) {
   .desktop-flow .surface-panel:nth-child(n+2) { border-left: 0; border-top: 1px solid var(--line-strong); }
 }
+
+/* Contact: a compact closing row, not a full feature panel. */
+.contact .section-head { margin-bottom: 20px; }
+.contact-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 32px; }
+.contact-row p { margin: 0; font-size: 17px; color: var(--ink-muted); }
+.contact-list { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.contact-list a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 10px 16px;
+  font-family: var(--mono); font-size: 14px; color: var(--ink-bright);
+  background: var(--bg-raised); border: 1px solid var(--line-strong); border-radius: 6px;
+}
+.contact-list a:hover { border-color: var(--beacon); color: var(--ink-bright); }
+@media (max-width: 640px) {
+  .contact-list, .contact-list li, .contact-list a { width: 100%; }
+}

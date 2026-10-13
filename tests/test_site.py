@@ -41,6 +41,12 @@ class SiteTests(unittest.TestCase):
                         self.assertIn(unquote(parsed.fragment), Page(target.read_text()).ids)
             for image in page.images:
                 self.assertIn('alt', image)
+    def test_contact_emails(self):
+        page = Page((ROOT / 'index.html').read_text())
+        self.assertIn('contact', page.ids)
+        self.assertIn('#contact', page.urls)
+        for address in ('chris@agenthangar.ai', 'mayank@agenthangar.ai'):
+            self.assertIn(f'mailto:{address}', page.urls)
     def test_css_assets_exist(self):
         for file in ROOT.glob('*.css'):
             for url in re.findall(r'url\([\s\'"]*([^\s\)\'"]+)', file.read_text()):

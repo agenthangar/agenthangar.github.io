@@ -1,0 +1,2 @@
+# Unified diffs include a single-space prefix on blank context lines.
+scripts/demo/fixture/expected.patch -whitespace

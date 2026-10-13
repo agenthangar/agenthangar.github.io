@@ -109,7 +109,7 @@ a:focus-visible { outline: 2px solid var(--beacon); outline-offset: 3px; border-
 .agent-logos span { font-family: var(--mono); font-size: 12px; }
 .agent-logos a:hover span { color: var(--beacon); }
 .agent-support-note { margin: 24px 0 0; color: var(--ink-faint); font-size: 12px; }
-.demo-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: clamp(24px, 5vw, 64px); }
+.demo-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: start; gap: clamp(24px, 5vw, 64px); }
 .demo-copy .eyebrow { margin: 0 0 12px; }
 .demo-copy h3 { margin: 0 0 18px; font-size: clamp(30px, 4vw, 52px); line-height: 1.03; letter-spacing: -0.03em; color: var(--ink-bright); }
 .demo-copy p:not(.eyebrow) { margin: 0; max-width: 490px; font-size: 17px; color: var(--ink-muted); }
@@ -171,4 +171,92 @@ a:focus-visible { outline: 2px solid var(--beacon); outline-offset: 3px; border-
 
 @media (prefers-reduced-motion: reduce) {
   .bay { transition: none; }
+}
+
+/* Desktop-first t feature. The panels are command examples, not app screenshots. */
+.hero .wrap { padding-top: 64px; padding-bottom: 64px; gap: 20px; }
+.hero h1 { font-size: clamp(38px, 5vw, 64px); }
+.t-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; padding: 28px 0 40px; }
+.t-intro .eyebrow { margin: 0 0 22px; font-size: 11px; }
+.t-intro h2 { margin: 0; font-size: clamp(46px, 6vw, 76px); line-height: 1.04; letter-spacing: -.045em; }
+.t-intro h2 span { color: var(--beacon); }
+.t-intro-copy > p { font-size: 20px; color: var(--ink-muted); max-width: 460px; }
+.t-intro-copy > p:first-child { margin-top: 0; }
+.t-intro-copy .surface-note { font-family: var(--mono); font-size: 12px; line-height: 1.8; }
+.desktop-flow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid var(--line-strong); border-radius: 12px; overflow: hidden; }
+.surface-panel { padding: 28px 24px; background: var(--bg-raised); min-width: 0; }
+.surface-panel + .surface-panel { border-left: 1px solid var(--line-strong); }
+.surface-kicker { display: flex; justify-content: space-between; align-items: center; gap: 6px; font: 11px var(--mono); color: var(--ink-muted); }
+.surface-panel h3 { margin: 26px 0 18px; font-size: 28px; letter-spacing: -.03em; }
+.surface-panel code { display: block; font: 12px/1.8 var(--mono); overflow-wrap: anywhere; color: var(--ink-bright); }
+.surface-panel p { font-size: 14px; color: var(--ink-muted); margin: 18px 0 0; }
+.desktop-panel { background: linear-gradient(145deg, #353023, #22221f); box-shadow: inset 0 3px var(--beacon); }
+.desktop-panel .surface-kicker { color: var(--beacon); }
+.os-badge { border: 1px solid #726040; padding: 4px 6px; border-radius: 4px; }
+.recording-links { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; font: 12px var(--mono); }
+.terminal-recording { margin: 0; min-width: 0; }
+.terminal-recording video { aspect-ratio: 1200 / 660; }
+.terminal-recording figcaption { margin-top: 12px; color: var(--ink-muted); font: 11px/1.6 var(--mono); }
+.handoff-details { margin-top: 40px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 20px 0; }
+.handoff-details summary { cursor: pointer; font-size: 15px; }
+.handoff-details summary span { float: right; color: var(--ink-muted); font: 12px/1.8 var(--mono); }
+.handoff-details .demo-layout { padding-top: 24px; }
+.handoff-details p { color: var(--ink-muted); }
+@media (max-width: 900px) {
+  .t-intro { gap: 24px; }
+  .desktop-flow { grid-template-columns: 1fr; }
+  .surface-panel + .surface-panel { border-left: 0; border-top: 1px solid var(--line-strong); }
+}
+@media (max-width: 640px) {
+  .t-intro { grid-template-columns: 1fr; }
+  .t-intro-copy > p { font-size: 18px; }
+  .section-head { flex-wrap: wrap; }
+  .handoff-details summary span { float: none; display: block; margin-top: 8px; }
+}
+
+/* Reusable tool showcase: each tool gets the same feature surface. */
+.tool-picker { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 40px; }
+.tool-picker button { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 22px; border: 1px solid var(--line-strong); border-radius: 8px; background: var(--bg-raised); color: var(--ink-muted); font: 13px/1.4 var(--sans); text-align: left; cursor: pointer; }
+.tool-picker button strong { color: var(--ink-bright); font-size: 24px; letter-spacing: -.03em; }
+.tool-picker button[aria-selected="true"] { border-color: var(--beacon); background: #2c281f; box-shadow: inset 0 3px var(--beacon); }
+.tool-picker button:hover { border-color: var(--beacon); }
+.tool-picker button:focus-visible, .tool-panel:focus-visible { outline: 2px solid var(--beacon); outline-offset: 4px; }
+.tool-index { font: 11px var(--mono); color: var(--beacon); text-transform: uppercase; letter-spacing: .07em; }
+.tool-panel[hidden] { display: none; }
+.tool-panel { scroll-margin-top: 24px; }
+.tool-panel .t-intro { padding-top: 0; }
+.tool-panel .t-intro h2, .feature-copy h2 { font-size: clamp(38px, 4.4vw, 60px); }
+.feature-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding: 24px 0 40px; }
+.feature-copy h2 { margin: 20px 0 24px; line-height: 1.05; letter-spacing: -.045em; }
+.feature-copy h2 span { color: var(--beacon); }
+.feature-copy > p:not(.eyebrow) { font-size: 19px; color: var(--ink-muted); max-width: 480px; }
+.feature-copy .surface-note { font: 12px/1.8 var(--mono) !important; margin: 24px 0; }
+.feature-map { background: var(--bg-raised); border: 1px solid var(--line-strong); border-radius: 10px; padding: 32px; }
+.map-label { display: block; font: 11px var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-muted); margin-bottom: 24px; }
+.feature-map > div { display: flex; gap: 24px; padding: 24px 0; border-top: 1px solid var(--line-strong); }
+.feature-map b { font: 12px var(--mono); color: var(--beacon); padding-top: 6px; }
+.feature-map h3 { margin: 0 0 8px; font-size: 22px; }
+.feature-map p { margin: 0; color: var(--ink-muted); font-size: 15px; }
+@media (max-width: 900px) { .tool-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); } .feature-layout { grid-template-columns: 1fr; gap: 24px; } }
+@media (max-width: 640px) { .tool-picker { gap: 8px; } .tool-picker button { padding: 16px; } .tool-picker button strong { font-size: 21px; } .tool-picker button > span:last-child { font-size: 12px; } }
+/* Give real terminal text the full content width so model and context are legible. */
+#t-recordings { display: block; }
+#t-recordings .demo-copy { display: grid; grid-template-columns: 1fr .75fr; column-gap: 48px; margin-bottom: 28px; align-items: start; }
+#t-recordings .demo-copy > .eyebrow, #t-recordings .demo-copy > h3, #t-recordings .demo-copy > p { grid-column: 1; }
+#t-recordings .demo-copy > h3 { font-size: 36px; }
+#t-recordings .demo-install { grid-column: 2; grid-row: 1 / 4; margin-top: 0; }
+#t-recordings .terminal-recording video { aspect-ratio: auto; }
+@media (max-width: 640px) {
+  #t-recordings .demo-copy { display: block; }
+  #t-recordings .demo-install { margin-top: 24px; }
+}
+
+/* The agent strip introduces the whole tool collection. */
+.hero .agent-support { width: 100%; margin: 12px 0 0; padding: 28px 0 0; border-top: 1px solid var(--line); border-bottom: 0; }
+.hero .agent-logos { justify-content: space-between; gap: 24px; }
+.desktop-flow .surface-panel:nth-child(3) { border-left: 0; }
+.desktop-flow .surface-panel:nth-child(n+3) { border-top: 1px solid var(--line-strong); }
+#t-recordings { margin-top: 48px; }
+@media (max-width: 900px) {
+  .desktop-flow .surface-panel:nth-child(n+2) { border-left: 0; border-top: 1px solid var(--line-strong); }
 }

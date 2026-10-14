@@ -67,3 +67,17 @@ test('contact section lists both emails and stays compact', async ({ page }) => 
   expect(width[0]).toBeLessThanOrEqual(width[1] + 1);
   await contact.screenshot({ path: `test-results/contact-${test.info().project.name}.png` });
 });
+
+test('runtimebrief links to its iPhone app', async ({ page }) => {
+  await page.route(/google-analytics|googletagmanager|fonts\.google/, route => route.abort());
+  await page.goto('/');
+  await page.getByRole('tab', { name: /02 \/ Report/ }).click();
+  const panel = page.locator('#runtimebrief-demo');
+  const appStore = panel.locator('a[href="https://apps.apple.com/us/app/runtimebrief/id6789999252"]');
+  await expect(appStore).toBeVisible();
+  await expect(appStore).toHaveText(/Get the iPhone app/);
+  await expect(panel.locator('a.button[href="https://github.com/agenthangar/runtimebrief"]')).toBeVisible();
+  const width = await page.evaluate(() => [document.documentElement.scrollWidth, document.documentElement.clientWidth]);
+  expect(width[0]).toBeLessThanOrEqual(width[1] + 1);
+  await panel.locator('.feature-copy').screenshot({ path: `test-results/runtimebrief-${test.info().project.name}.png` });
+});

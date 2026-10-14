@@ -47,6 +47,9 @@ class SiteTests(unittest.TestCase):
         self.assertIn('#contact', page.urls)
         for address in ('chris@agenthangar.ai', 'mayank@agenthangar.ai'):
             self.assertIn(f'mailto:{address}', page.urls)
+    def test_runtimebrief_app_store_link(self):
+        page = Page((ROOT / 'index.html').read_text())
+        self.assertIn('https://apps.apple.com/us/app/runtimebrief/id6789999252', page.urls)
     def test_css_assets_exist(self):
         for file in ROOT.glob('*.css'):
             for url in re.findall(r'url\([\s\'"]*([^\s\)\'"]+)', file.read_text()):

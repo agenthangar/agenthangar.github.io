@@ -81,3 +81,21 @@ test('runtimebrief links to its iPhone app', async ({ page }) => {
   expect(width[0]).toBeLessThanOrEqual(width[1] + 1);
   await panel.locator('.feature-copy').screenshot({ path: `test-results/runtimebrief-${test.info().project.name}.png` });
 });
+
+test('the runtimebrief demo video plays in its panel and pauses when switching tools', async ({ page }) => {
+  await page.route(/google-analytics|googletagmanager|fonts\.google/, route => route.abort());
+  await page.goto('/#runtimebrief-recording');
+  // tools.js turns the picker into tabs; under load the local server can deliver it late.
+  await expect(page.locator('#pick-t')).toHaveAttribute('role', 'tab', { timeout: 15000 });
+  const video = page.locator('#runtimebrief-recording video');
+  await expect(video).toBeVisible();
+  await expect(video).toHaveAttribute('poster', /runtimebrief-poster\.jpg/);
+  await video.evaluate(el => { if (el.readyState === 0) el.load(); });
+  await expect.poll(() => video.evaluate(el => el.duration), { timeout: 20000 }).toBeGreaterThan(60);
+  // Don't wait on play()'s promise: it can stall in headless browsers before media buffers.
+  await video.evaluate(el => { el.muted = true; el.play().catch(() => {}); });
+  await expect(video).toHaveJSProperty('paused', false);
+  await page.locator('#pick-t').click();
+  await expect(video).toHaveJSProperty('paused', true);
+});
+

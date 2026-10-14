@@ -31,6 +31,18 @@ keyboard navigation; without JavaScript every tool remains visible. The page
 introduces AgentHangar's vision and highlights terminal, remote-host, and desktop
 workflows.
 
+### Watch RuntimeBrief on iPhone
+
+[![RuntimeBrief: every agent, every vendor, one place.](assets/recordings/runtimebrief-poster.jpg)](assets/recordings/runtimebrief.mp4)
+
+[Watch the 75-second video](assets/recordings/runtimebrief.mp4) ·
+[Capture notes](assets/recordings/README.md)
+
+The runtimebrief panel plays a tour of the iPhone app's offline demo: every project
+and coding agent in one list, the evidence behind a project, Siri answering what needs
+attention, starting a Codex task by voice, and following up with the running agent.
+The data is fictional, and the Siri screens are recreated from the app's replies.
+
 ### Watch t in action
 
 [![One task. Every surface.](assets/recordings/workflow-poster.png)](assets/recordings/workflow.mp4)

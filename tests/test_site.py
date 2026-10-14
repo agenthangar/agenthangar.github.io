@@ -50,6 +50,13 @@ class SiteTests(unittest.TestCase):
     def test_runtimebrief_app_store_link(self):
         page = Page((ROOT / 'index.html').read_text())
         self.assertIn('https://apps.apple.com/us/app/runtimebrief/id6789999252', page.urls)
+    def test_runtimebrief_recording(self):
+        page = Page((ROOT / 'index.html').read_text())
+        self.assertIn('runtimebrief-recording', page.ids)
+        self.assertIn('#runtimebrief-recording', page.urls)
+        video = ROOT / 'assets/recordings/runtimebrief.mp4'
+        self.assertLess(video.stat().st_size, 15 * 1024 * 1024, 'Keep the page video small')
+        self.assertTrue((ROOT / 'assets/recordings/runtimebrief-poster.jpg').is_file())
     def test_css_assets_exist(self):
         for file in ROOT.glob('*.css'):
             for url in re.findall(r'url\([\s\'"]*([^\s\)\'"]+)', file.read_text()):

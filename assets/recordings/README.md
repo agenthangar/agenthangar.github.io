@@ -66,3 +66,38 @@ python3 -m venv /tmp/t-media-venv
 `workflow.json` defines chapter sources, trims, evidence, and limitations.
 Related work: [site #5](https://github.com/agenthangar/agenthangar.github.io/issues/5)
 and [t #107](https://github.com/agenthangar/t/issues/107).
+
+# Featured: RuntimeBrief on iPhone
+
+`runtimebrief.mp4` (75 seconds, 1920×1152, 60 fps) and `runtimebrief-poster.jpg` show
+the RuntimeBrief iPhone app's offline demo. Every project, commit, session, and reply
+in it is the app's fictional demo data; no Mac or real project is involved.
+
+1. The portfolio: Claude Code, Codex, and Cursor work across projects in one list.
+2. Sample Tracker: the analyst update, agent sessions from all three vendors, recent
+   commits, and Xcode, TestFlight, and App Store status.
+3. Siri: "What needs attention in RuntimeBrief?" and "Ask RuntimeBrief what's the
+   status of Sample Tracker".
+4. "Start Codex for Sample Tracker from RuntimeBrief": the task, Siri's confirmation,
+   and the new Codex task in the app.
+5. "Tell the Sample Tracker agent in RuntimeBrief": the follow-up appears in the
+   Codex conversation.
+
+**Capture.** App footage is one continuous screen recording of build 1.0.3 (44) on a
+Revyl cloud iPhone 17 Pro Max (iOS 27), captured October 14, 2026. The edit removes
+idle time between taps, plays scrolling at 1.6×, and joins cuts on identical screens.
+The recording's clock and "no service" indicator are replaced by a 9:41 status bar.
+Tap circles, amber outlines, the device frame, captions, title and end cards are
+editorial.
+
+**Siri screens are recreations.** Siri can't be recorded on a cloud device, so its
+orb, request bubbles, and cards are drawn over the app footage, following Siri's
+layout on a physical iPhone. The replies use the app's own reply formats with the
+demo projects' facts. Demo mode prefixes Siri replies with "Fictional demo"; the
+video omits that prefix, and the Sample Tracker status answer is written in the
+analysis format rather than quoting the demo's own analysis text.
+
+**Music** is an original track synthesized for this video; it contains no samples.
+Agent logos follow [`assets/agent-logos`](../agent-logos/README.md) and are unchanged.
+The edit was made with Remotion; its source is kept in the
+[runtimebrief repository](https://github.com/agenthangar/runtimebrief) under `docs/demo-video`.

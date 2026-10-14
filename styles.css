@@ -197,6 +197,10 @@ a:focus-visible { outline: 2px solid var(--beacon); outline-offset: 3px; border-
 .terminal-recording { margin: 0; min-width: 0; }
 .terminal-recording video { aspect-ratio: 1200 / 660; }
 .terminal-recording figcaption { margin-top: 12px; color: var(--ink-muted); font: 11px/1.6 var(--mono); }
+.product-recording { margin: 8px 0 40px; min-width: 0; scroll-margin-top: 24px; }
+.product-recording video { display: block; width: 100%; height: auto; aspect-ratio: 1920 / 1152; background: var(--bg-raised); border: 1px solid var(--line-strong); border-radius: 10px; }
+.product-recording figcaption { margin-top: 12px; color: var(--ink-muted); font: 11px/1.6 var(--mono); }
+.product-recording figcaption a { color: var(--ink); }
 .handoff-details { margin-top: 40px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 20px 0; }
 .handoff-details summary { cursor: pointer; font-size: 15px; }
 .handoff-details summary span { float: right; color: var(--ink-muted); font: 12px/1.8 var(--mono); }

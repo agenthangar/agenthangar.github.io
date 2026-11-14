@@ -99,3 +99,23 @@ test('the runtimebrief demo video plays in its panel and pauses when switching t
   await expect(video).toHaveJSProperty('paused', true);
 });
 
+
+test('Nightr follows t with accessible keyboard navigation and a deep link', async ({ page }) => {
+  await page.route(/google-analytics|googletagmanager|fonts\.google/, route => route.abort());
+  await page.goto('/#nightr-demo');
+  const nightr = page.locator('#pick-nightr');
+  await expect(nightr).toHaveAttribute('aria-selected', 'true');
+  await expect(page.locator('#nightr-demo')).toBeVisible();
+  await expect(nightr.locator('.new-badge')).toHaveText('NEW');
+  const order = await page.locator('[data-tool]').evaluateAll(tabs => tabs.map(tab => tab.id));
+  expect(order).toEqual(['pick-t', 'pick-nightr', 'pick-runtimebrief', 'pick-evals', 'pick-dotfiles']);
+  await nightr.press('ArrowLeft');
+  await expect(page.locator('#pick-t')).toBeFocused();
+  await page.locator('#pick-t').press('ArrowRight');
+  await expect(nightr).toBeFocused();
+  await expect(nightr).toHaveAttribute('aria-selected', 'true');
+  await nightr.press('End');
+  await expect(page.locator('#pick-dotfiles')).toBeFocused();
+  await page.locator('#pick-dotfiles').press('Home');
+  await expect(page.locator('#pick-t')).toBeFocused();
+});

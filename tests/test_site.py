@@ -41,6 +41,15 @@ class SiteTests(unittest.TestCase):
                         self.assertIn(unquote(parsed.fragment), Page(target.read_text()).ids)
             for image in page.images:
                 self.assertIn('alt', image)
+    def test_nightr_listing_is_truthful_and_follows_t(self):
+        html = (ROOT / 'index.html').read_text()
+        self.assertLess(html.index('id="pick-t"'), html.index('id="pick-nightr"'))
+        self.assertLess(html.index('id="pick-nightr"'), html.index('id="pick-runtimebrief"'))
+        self.assertIn('id="nightr-demo"', html)
+        self.assertIn('No signed installer available yet.', html)
+        self.assertIn('https://github.com/agenthangar/nightr/releases', html)
+        self.assertNotIn('nightr/releases/download/', html)
+
     def test_contact_emails(self):
         page = Page((ROOT / 'index.html').read_text())
         self.assertIn('contact', page.ids)

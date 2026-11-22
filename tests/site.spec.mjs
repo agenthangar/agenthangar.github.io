@@ -105,7 +105,9 @@ test('Nightr follows t with accessible keyboard navigation and a deep link', asy
   await page.goto('/#nightr-demo');
   const nightr = page.locator('#pick-nightr');
   await expect(nightr).toHaveAttribute('aria-selected', 'true');
-  await expect(page.locator('#nightr-demo')).toBeVisible();
+  const panel = page.locator('#nightr-demo');
+  await expect(panel).toBeVisible();
+  await expect(panel.getByRole('link', { name: /Explore Nightr/ })).toHaveAttribute('href', 'https://nightr.ai/');
   await expect(nightr.locator('.new-badge')).toHaveText('NEW');
   const order = await page.locator('[data-tool]').evaluateAll(tabs => tabs.map(tab => tab.id));
   expect(order).toEqual(['pick-t', 'pick-nightr', 'pick-runtimebrief', 'pick-evals', 'pick-dotfiles']);

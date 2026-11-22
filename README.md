@@ -26,7 +26,7 @@ Push this repository to `agenthangar/agenthangar.github.io` and enable GitHub Pa
 
 ## Tools and demo materials
 
-The site features t, runtimebrief, evals, and dotfiles. Accessible tabs support
+The site features t, [Nightr](https://nightr.ai/), runtimebrief, evals, and dotfiles. Accessible tabs support
 keyboard navigation; without JavaScript every tool remains visible. The page
 introduces AgentHangar's vision and highlights terminal, remote-host, and desktop
 workflows.
